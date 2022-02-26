@@ -39,6 +39,7 @@ public class RedesController {
 		}
 	}
 }
+int i = 9;
 
 /*
 public void readTraceRoute(String process) {

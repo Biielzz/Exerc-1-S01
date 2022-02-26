@@ -19,3 +19,6 @@ public class Main {
 		// String process = "tracert www.fateczl.edu.br";
 //			pCont.readTraceRoute(process);
 
+}
+}
+int i = 0;
