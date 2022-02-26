@@ -16,8 +16,6 @@ public class RedesController {
 	return os;
 	}
 	
-	
-	
 	public void readProcess(String process) {
 		try {
 			Process p = Runtime.getRuntime().exec(process);
