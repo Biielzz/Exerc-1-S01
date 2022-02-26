@@ -12,14 +12,10 @@ public class Main {
 		System.out.println(os);
 		
 	
-	
-		
 	     String process = "PING -4 -n 10 www.google.com.br";
 		 reController.readProcess(process);
 	
-}		
-	
-		
-}
 
+		// String process = "tracert www.fateczl.edu.br";
+//			pCont.readTraceRoute(process);
 
