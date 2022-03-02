@@ -1,7 +1,7 @@
 package controller;
 
 import java.io.BufferedReader;
-
+import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 
@@ -17,9 +17,17 @@ public class RedesController {
 	return os;
 	}
 	
-	
-	
 	public void readProcess(String process) {
+		String Win = "";
+		String Lin = "";
+		if (os().contains("Windows")) {
+			Win = "PING -4 -n 10 " + Win;
+		
+		
+		if(os().contains("Linux")) {
+			Lin = "PING -4 -c 10 " + Lin;
+				
+	}
 		try {
 			Process p = Runtime.getRuntime().exec(process);
 			InputStream leFluxo = p.getInputStream();
@@ -36,15 +44,26 @@ public class RedesController {
 
 		} catch (Exception e) {
 			System.err.println("Chamada inválida");
-		}
+		
 	}
-}
-int i = 9;
 
-/*
-public void readTraceRoute(String process) {
+		}
+	}	
+
+
+public void readTraceRoute(String proces) {
+	String IP = "";
+	String IF = "";
+	if (os().contains("Windows")) {
+		IP = "IPCONFIG " + IP;
+	
+	
+	if(os().contains("Linux")) {
+		IF = "IFCONFIG " + IF;			
+				
+}
 	try {
-		Process p = Runtime.getRuntime().exec(process);
+		Process p = Runtime.getRuntime().exec(proces);
 		InputStream fluxo = p.getInputStream();
 		InputStreamReader convString = new InputStreamReader(fluxo);
 		BufferedReader buffer = new BufferedReader(convString);
@@ -75,4 +94,5 @@ public void readTraceRoute(String process) {
 		System.err.println("Chamada inválida");
 	}
 }
-*/
+}
+}
