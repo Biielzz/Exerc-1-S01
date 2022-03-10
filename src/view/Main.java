@@ -30,7 +30,7 @@ public class Main {
 	  break;
 	  
  case 3 :
-	 System.out.println("\n Encerado"); 
+	 System.out.println("\n Encerado!!"); 
 	 
  break;
  
